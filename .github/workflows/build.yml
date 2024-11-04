@@ -9,7 +9,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '18'
-      - name: Install Dependencies
+      - name: Install Eslint Dependencies
         run: npm ci
+      - name: Install dev dependencies  
+        run: npm ci --only=dev  
       - name: Lint
         run: npm run lint
