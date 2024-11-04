@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print message
-        run: echo "Issue created or edited"
+        run: echo "${{ toJSON(github.event.issue)}}"
    
